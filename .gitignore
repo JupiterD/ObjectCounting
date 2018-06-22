@@ -60,3 +60,4 @@ target/
 \.idea/
 
 video/
+*.avi
