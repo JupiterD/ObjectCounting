@@ -121,7 +121,6 @@ if __name__ == '__main__':
         object_list, new_object_in, new_object_out = pipeline.run(frame_temp, 35, 35, object_list, counting_log)
         object_in += new_object_in
         object_out += new_object_out
-        end_time = cv.getTickCount()
 
         counting_string = "in: {}  out: {}".format(object_in, object_out)
 
@@ -138,6 +137,7 @@ if __name__ == '__main__':
         retval, frame = cap.read()
 
         fps += 1
+        end_time = cv.getTickCount()
 
         # 一秒更新一次fps
         total_time += (end_time - start_time) / tick_frequency
